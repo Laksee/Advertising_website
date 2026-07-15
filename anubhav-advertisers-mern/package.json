@@ -1,0 +1,16 @@
+{
+  "name": "anubhav-advertisers-mern",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack demo site for Anubhav Advertisers — Express/MongoDB API + React (Vite) frontend.",
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "seed": "npm run seed --prefix server",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "dev": "npx concurrently -n SERVER,CLIENT -c blue,magenta \"npm:dev:server\" \"npm:dev:client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
