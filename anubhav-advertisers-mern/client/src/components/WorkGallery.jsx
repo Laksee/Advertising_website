@@ -9,104 +9,63 @@ function WorkCard({ item, index, onOpen }) {
   const rotations = [-12, 8, -6, 10, -4, 7];
 
   const widths = [
-    "320px",
-    "430px",
     "360px",
-    "470px",
-    "340px",
-    "410px",
+    "360px",
+    "390px",
+    "360px",
+    "370px",
+    "360px",
   ];
 
   const heights = [
-    "460px",
-    "300px",
-    "500px",
-    "340px",
-    "280px",
-    "480px",
+    "260px",
+    "260px",
+    "260px",
+    "260px",
+    "260px",
+    "260px",
   ];
 
   const style = {
-    width: widths[index % widths.length],
-    height: heights[index % heights.length],
+  width: widths[index % widths.length],
+  height: heights[index % heights.length],
 
-    transform: `rotate(${rotations[index % rotations.length]}deg)`,
+ "--rotation": `${rotations[index % rotations.length]}deg`,
 
-    animationDelay: `${index * 0.3}s`,
-    animationDuration: `${6 + index}s`,
-  };
+  "--i": index,
+};
 
-  function handleMouseMove(e) {
-    const card = cardRef.current;
 
-    if (!card) return;
+const image =
+  item.photos?.[0] ??
+  `https://picsum.photos/seed/${item.seed}/1200/900`;
 
-    const rect = card.getBoundingClientRect();
+return (
+  <div className="campaign-card-float">
+  <div
+    ref={(node) => {
+      ref.current = node;
+      cardRef.current = node;
+    }}
+    style={style}
+    className={`campaign-card ${isVisible ? "show" : ""}`}
+    onClick={() => onOpen(item)}
+  >
+    <img
+      src={image}
+      alt={item.project}
+      className="campaign-card__image"
+    />
 
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    <div className="campaign-card__gradient" />
 
-    const rotateY = ((x / rect.width) - 0.5) * 12;
-    const rotateX = ((y / rect.height) - 0.5) * -12;
-
-    card.style.transform = `
-    perspective(1200px)
-    rotateX(${rotateX}deg)
-    rotateY(${rotateY}deg)
-    translateY(-12px)
-  `;
-  }
-
-  function handleMouseLeave() {
-    const card = cardRef.current;
-
-    if (!card) return;
-
-    card.style.transform = "";
-  }
-
-  const image =
-    item.photos?.[0] ??
-    `https://picsum.photos/seed/${item.seed}/1200/900`;
-
-  return (
-    <div
-      ref={(node) => {
-        ref.current = node;
-        cardRef.current = node;
-      }}
-      style={style}
-      className={`campaign-card ${isVisible ? "show delay-${index}" : ""}`}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      onClick={() => onOpen(item)}
-    >
-      <img
-        src={image}
-        alt={item.project}
-        className="campaign-card__image"
-      />
-
-      <div className="campaign-card__gradient" />
-
-      <div className="campaign-card__content">
-
-        <span className="campaign-card__client">
-          {item.client}
-        </span>
-
-        <h3>{item.project}</h3>
-
-        <p>{item.location}</p>
-
-      </div>
-
-      <div className="campaign-card__arrow">
-        ↗
-      </div>
-
+    <div className="campaign-card__arrow">
+      ↗
     </div>
-  );
+
+  </div>
+  </div>
+);
 }
 
 function GalleryModal({ project, onClose }) {
@@ -214,31 +173,30 @@ export default function WorkGallery({ items }) {
   return (
     <section className="section" id="work">
       <div className="container">
+
         <div className="section-head">
-          <p className="eyebrow">OUR WORK, ON THE STREET</p>
-          <AnimatedText as="h2" className="section-title" text="Sites Live Right Now" />
-          <p className="lede">
-            Real installs, photo-verified. Flip a card to see the client, the location, and the exact spec.
-          </p>
         </div>
 
-        <div className="floating-gallery">
-          {items.map((item, index) => (
-            <WorkCard
-              key={item.project}
-              item={item}
-              index={index}
-              onOpen={setSelectedProject}
-            />
-          ))}
+        <div className="work-gallery-wrap">
+
+          <div className="gallery-title">
+            OUR WORK
+          </div>
+
+          <div className="floating-gallery">
+            {items.map((item, index) => (
+              <WorkCard
+                key={item.project}
+                item={item}
+                index={index}
+                onOpen={setSelectedProject}
+              />
+            ))}
+          </div>
+
         </div>
+
       </div>
-      {selectedProject && (
-        <GalleryModal
-          project={selectedProject}
-          onClose={() => setSelectedProject(null)}
-        />
-      )}
     </section>
   );
 }

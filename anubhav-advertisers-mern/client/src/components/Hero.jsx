@@ -77,7 +77,7 @@ export default function Hero() {
 
       <div className="container hero__inner">
         <div className="hoarding-frame">
-          <span className="hoarding-frame__tag">SITE 01 — NH-8, GURUGRAM</span>
+          <span className="hoarding-frame__tag">D 49,Sector 10, Noida</span>
 
           <p className="eyebrow">OUT-OF-HOME ADVERTISING AGENCY</p>
 

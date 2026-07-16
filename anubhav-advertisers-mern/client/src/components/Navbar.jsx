@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="container nav__inner">
         <a className="nav__logo" href="#top" onClick={handleLinkClick}>
           <RegistrationMark size={26} />
-          <span>ANUBHAV</span>
+          <span>ANUBHAV ADVERTISER</span>
         </a>
 
         <nav className="nav__links" aria-label="Primary">

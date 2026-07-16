@@ -3,6 +3,13 @@
 // backend or MongoDB isn't running yet. Swapped out silently once the real
 // API responds.
 
+import pic1 from "../photos/pic1.png"
+import pic2 from "../photos/pic2.png"
+import pic3 from "../photos/pic3.png"
+import pic4 from "../photos/pic4.png"
+import pic5 from "../photos/pic5.png"
+import pic6 from "../photos/pic6.png"
+
 export const services = [
   {
     code: "SRV / 01",
@@ -59,10 +66,7 @@ export const workGallery = [
     swatch: "cyan",
 
     photos: [
-      "https://picsum.photos/seed/hoarding1/1200/900",
-      "https://picsum.photos/seed/hoarding2/1200/900",
-      "https://picsum.photos/seed/hoarding3/1200/900",
-      "https://picsum.photos/seed/hoarding4/1200/900",
+      pic1
     ],
   },
 
@@ -74,9 +78,7 @@ export const workGallery = [
     swatch: "magenta",
 
     photos: [
-      "https://picsum.photos/seed/mall1/1200/900",
-      "https://picsum.photos/seed/mall2/1200/900",
-      "https://picsum.photos/seed/mall3/1200/900",
+      pic2
     ],
   },
 
@@ -88,9 +90,7 @@ export const workGallery = [
     swatch: "yellow",
 
     photos: [
-      "https://picsum.photos/seed/metro1/1200/900",
-      "https://picsum.photos/seed/metro2/1200/900",
-      "https://picsum.photos/seed/metro3/1200/900",
+      pic3
     ],
   },
 
@@ -101,11 +101,7 @@ export const workGallery = [
     spec: "200 Autos · Full Wrap · 3 Months",
     swatch: "ink",
 
-    photos: [
-      "https://picsum.photos/seed/auto1/1200/900",
-      "https://picsum.photos/seed/auto2/1200/900",
-      "https://picsum.photos/seed/auto3/1200/900",
-    ],
+    photos: [pic4]
   },
 
   {
@@ -115,11 +111,7 @@ export const workGallery = [
     spec: "220 ft Hand-Painted Wall · Permanent",
     swatch: "magenta",
 
-    photos: [
-      "https://picsum.photos/seed/wall1/1200/900",
-      "https://picsum.photos/seed/wall2/1200/900",
-      "https://picsum.photos/seed/wall3/1200/900",
-    ],
+    photos: [pic5]
   },
 
   {
@@ -129,11 +121,7 @@ export const workGallery = [
     spec: "60 Buses · Bus-Back Panel · 6 Months",
     swatch: "cyan",
 
-    photos: [
-      "https://picsum.photos/seed/bus1/1200/900",
-      "https://picsum.photos/seed/bus2/1200/900",
-      "https://picsum.photos/seed/bus3/1200/900",
-    ],
+    photos: [pic6] 
   },
 ];
 

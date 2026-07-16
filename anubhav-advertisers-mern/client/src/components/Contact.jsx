@@ -52,7 +52,7 @@ export default function Contact() {
 
             <ul className="contact__details">
               <li>Anubhav Advertisers</li>
-              <li>4th Floor, Cyber Hub, DLF Phase 2, Gurugram, Haryana 122002</li>
+              <li>D 49, 1st floor, D Block, Sector 10, Noida, Uttar Pradesh 201301</li>
               <li>Sites live in 18 cities across India</li>
               <li>
                 <a href="tel:+919810022456">+91 98100 22456</a>
