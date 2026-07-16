@@ -1,11 +1,13 @@
 import { useEffect, useRef } from "react";
 import AnimatedText from "./AnimatedText";
+import useParallax from "../hooks/useParallax";
 
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 
 export default function Hero() {
-  const heroRef = useRef(null);
   const skylineRef = useRef(null);
+  const heroRef = useRef(null);
+
 
   // Cursor spotlight: a soft glow that follows the pointer, like a beam
   // sweeping a hoarding lit up at night. Mutates the DOM directly instead of
@@ -100,7 +102,7 @@ export default function Hero() {
 
           <div className="hero__actions">
             <a className="btn btn--primary " href="#contact">
-              Book A Site
+              Contact us
             </a>
             <a className="btn btn--outline" href="#work">
               See Our Work →

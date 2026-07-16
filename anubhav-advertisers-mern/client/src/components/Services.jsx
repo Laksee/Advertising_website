@@ -1,6 +1,9 @@
 import CropMarks from "./CropMarks";
 import AnimatedText from "./AnimatedText";
 import useScrollReveal from "../hooks/useScrollReveal";
+import useParallax from "../hooks/useParallax";
+import { useRef } from "react";
+import useSectionReveal from "../hooks/useSectionReveal";
 
 function ServiceCard({ service }) {
   const [ref, isVisible] = useScrollReveal();
@@ -15,8 +18,15 @@ function ServiceCard({ service }) {
 }
 
 export default function Services({ services }) {
+  const sectionRef = useRef(null);
+
+  useSectionReveal(sectionRef);
   return (
-    <section className="section" id="services">
+    <section
+      ref={sectionRef}
+      className="section"
+      id="services"
+    >
       <div className="container">
         <div className="section-head">
           <p className="eyebrow">SRV / 01–06</p>

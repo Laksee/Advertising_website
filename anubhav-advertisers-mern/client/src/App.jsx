@@ -15,6 +15,7 @@ import FAQ from "./components/FAQ";
 import CTABanner from "./components/CTABanner";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import SmoothScroll from "./components/smoothScroll";
 
 export default function App() {
   // Render immediately with bundled demo content, then swap in whatever
@@ -26,6 +27,7 @@ export default function App() {
   const [testimonials, setTestimonials] = useState(fallback.testimonials);
   const [faqs, setFaqs] = useState(fallback.faqs);
   const [process, setProcess] = useState(fallback.process);
+  
 
   useEffect(() => {
     getServices().then(setServices);
@@ -38,6 +40,7 @@ export default function App() {
 
   return (
     <>
+    <SmoothScroll></SmoothScroll>
       <Navbar />
       <main>
         <Hero />
@@ -53,6 +56,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      
     </>
   );
 }

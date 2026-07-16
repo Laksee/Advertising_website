@@ -1,8 +1,17 @@
 import AnimatedText from "./AnimatedText";
+import useParallax from "../hooks/useParallax";
+import { useRef } from "react";
+import useSectionReveal from "../hooks/useSectionReveal";
 
 export default function Process({ steps }) {
+  const sectionRef = useRef(null);
+  useSectionReveal(sectionRef);
   return (
-    <section className="section" id="process">
+    <section
+      ref={sectionRef}
+      className="section"
+      id="process"
+    >
       <div className="container">
         <div className="section-head">
           <p className="eyebrow">HOW WE WORK</p>

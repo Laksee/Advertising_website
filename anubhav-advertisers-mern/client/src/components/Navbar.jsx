@@ -33,7 +33,7 @@ export default function Navbar() {
 
         <div className="nav__actions">
           <a className="btn btn--primary" href="#contact">
-            Book A Site
+            Contact us
           </a>
           <button
             className="nav__burger"
@@ -55,7 +55,7 @@ export default function Navbar() {
           </a>
         ))}
         <a href="#contact" onClick={handleLinkClick}>
-          Book A Site
+          Contact Us
         </a>
       </nav>
     </header>

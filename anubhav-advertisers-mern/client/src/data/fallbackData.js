@@ -123,6 +123,24 @@ export const workGallery = [
 
     photos: [pic6] 
   },
+  {
+    client: "Pulsewear Fitness",
+    project: "Bus Back Branding",
+    location: "Mumbai",
+    spec: "60 Buses · Bus-Back Panel · 6 Months",
+    swatch: "cyan",
+
+    photos: [pic6] 
+  },
+  {
+    client: "Pulsewear Fitness",
+    project: "Bus Back Branding",
+    location: "Mumbai",
+    spec: "60 Buses · Bus-Back Panel · 6 Months",
+    swatch: "cyan",
+
+    photos: [pic6] 
+  },
 ];
 
 export const testimonials = [

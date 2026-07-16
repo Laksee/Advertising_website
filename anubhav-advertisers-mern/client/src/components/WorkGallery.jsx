@@ -2,70 +2,74 @@ import { useState, useRef } from "react";
 import useScrollReveal from "../hooks/useScrollReveal";
 import RegistrationMark from "./RegistrationMark";
 import AnimatedText from "./AnimatedText";
+import useParallax from "../hooks/useParallax";
+
 
 function WorkCard({ item, index, onOpen }) {
   const [ref, isVisible] = useScrollReveal();
   const cardRef = useRef(null);
   const rotations = [-12, 8, -6, 10, -4, 7];
+  const workRef = useRef(null);
+  useParallax(workRef, 70);
 
   const widths = [
-    "360px",
-    "360px",
-    "390px",
-    "360px",
-    "370px",
-    "360px",
+    "340px",
+    "340px",
+    "340px",
+    "340px",
+    "340px",
+    "340px",
   ];
 
   const heights = [
-    "260px",
-    "260px",
-    "260px",
-    "260px",
-    "260px",
-    "260px",
+    "230px",
+    "230px",
+    "230px",
+    "230px",
+    "230px",
+    "230px",
   ];
 
   const style = {
-  width: widths[index % widths.length],
-  height: heights[index % heights.length],
+    width: widths[index % widths.length],
+    height: heights[index % heights.length],
 
- "--rotation": `${rotations[index % rotations.length]}deg`,
+    "--rotation": `${rotations[index % rotations.length]}deg`,
 
-  "--i": index,
-};
+    "--i": index,
+  };
 
 
-const image =
-  item.photos?.[0] ??
-  `https://picsum.photos/seed/${item.seed}/1200/900`;
+  const image =
+    item.photos?.[0] ??
+    `https://picsum.photos/seed/${item.seed}/1200/900`;
 
-return (
-  <div className="campaign-card-float">
-  <div
-    ref={(node) => {
-      ref.current = node;
-      cardRef.current = node;
-    }}
-    style={style}
-    className={`campaign-card ${isVisible ? "show" : ""}`}
-    onClick={() => onOpen(item)}
-  >
-    <img
-      src={image}
-      alt={item.project}
-      className="campaign-card__image"
-    />
+  return (
+    <div className={`campaign-card-float card-${index + 1}`}>
+      <div
+        ref={(node) => {
+          ref.current = node;
+          cardRef.current = node;
+        }}
+        style={style}
+        className={`campaign-card ${isVisible ? "show" : ""}`}
+        onClick={() => onOpen(item)}
+      >
+        <img
+          src={image}
+          alt={item.project}
+          className="campaign-card__image"
+        />
 
-    <div className="campaign-card__gradient" />
+        <div className="campaign-card__gradient" />
 
-    <div className="campaign-card__arrow">
-      ↗
+        <div className="campaign-card__arrow">
+          ↗
+        </div>
+
+      </div>
     </div>
-
-  </div>
-  </div>
-);
+  );
 }
 
 function GalleryModal({ project, onClose }) {
@@ -170,6 +174,8 @@ function GalleryModal({ project, onClose }) {
 
 export default function WorkGallery({ items }) {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [titleRef, titleVisible] = useScrollReveal();
+
   return (
     <section className="section" id="work">
       <div className="container">
@@ -180,7 +186,14 @@ export default function WorkGallery({ items }) {
         <div className="work-gallery-wrap">
 
           <div className="gallery-title">
-            OUR WORK
+
+            <div
+              ref={titleRef}
+              className={`gallery-title ${titleVisible ? "show" : ""}`}
+            >
+              OUR WORK
+            </div>
+
           </div>
 
           <div className="floating-gallery">
