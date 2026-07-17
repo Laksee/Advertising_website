@@ -1,0 +1,127 @@
+.clients-section {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 180px 0;
+
+}
+
+.clients-header {
+
+    text-align: center;
+
+    margin-bottom: 0px;
+
+}
+
+.clients-title {
+
+    font-family: var(--font-display);
+
+    font-size: clamp(3rem, 7vw, 7rem);
+
+    line-height: .9;
+
+}
+
+.clients-circle {
+    position: relative;
+
+    width: min(1650px, 95vw);
+
+    height: 720px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+.logo-card {
+
+    position: absolute;
+
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .18);
+
+    transition: transform .45s ease,
+        box-shadow .45s ease;
+
+    cursor: pointer;
+}
+
+/* .logo-card:hover {
+
+    transform:
+        translate(-50%, -50%) scale(1.08);
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, .18);
+
+} */
+
+.logo-card img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.clients-fade {
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 190px;
+
+    background: linear-gradient(to top,
+            #faf9f6 0%,
+            rgba(250, 249, 246, .96) 30%,
+            rgba(250, 249, 246, .55) 65%,
+            transparent 100%);
+
+    pointer-events: none;
+
+}
+
+.clients-section {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 180px 0 100px;
+}
+
+
+.clients-path {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 220px;
+
+    width: 100%;
+
+    height: 1000px;
+
+}

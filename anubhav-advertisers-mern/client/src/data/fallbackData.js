@@ -121,7 +121,7 @@ export const workGallery = [
     spec: "60 Buses · Bus-Back Panel · 6 Months",
     swatch: "cyan",
 
-    photos: [pic6] 
+    photos: [pic6]
   },
   {
     client: "Pulsewear Fitness",
@@ -130,7 +130,7 @@ export const workGallery = [
     spec: "60 Buses · Bus-Back Panel · 6 Months",
     swatch: "cyan",
 
-    photos: [pic6] 
+    photos: [pic6]
   },
   {
     client: "Pulsewear Fitness",
@@ -139,7 +139,120 @@ export const workGallery = [
     spec: "60 Buses · Bus-Back Panel · 6 Months",
     swatch: "cyan",
 
-    photos: [pic6] 
+    photos: [pic6]
+  },
+];
+
+export const clients = [
+  {
+    id: 1,
+    name: "Google",
+    logo: pic1,
+  },
+  {
+    id: 2,
+    name: "Amazon",
+    logo: pic2,
+  },
+  {
+    id: 3,
+    name: "Apple",
+    logo: pic3,
+  },
+  {
+    id: 4,
+    name: "Netflix",
+    logo: pic4,
+  },
+  {
+    id: 5,
+    name: "Adobe",
+    logo: pic5,
+  },
+  {
+    id: 6,
+    name: "Spotify",
+    logo: pic6,
+  },
+  {
+    id: 7,
+    name: "Meta",
+    logo: pic2,
+  },
+  {
+    id: 8,
+    name: "Nike",
+    logo: pic3,
+  },
+  {
+    id: 9,
+    name: "Google",
+    logo: pic1,
+  },
+  {
+    id: 10,
+    name: "Amazon",
+    logo: pic2,
+  },
+  {
+    id: 11,
+    name: "Apple",
+    logo: pic3,
+  },
+  {
+    id: 12,
+    name: "Netflix",
+    logo: pic4,
+  },
+  {
+    id: 13,
+    name: "Adobe",
+    logo: pic5,
+  },
+  {
+    id: 14,
+    name: "Spotify",
+    logo: pic6,
+  },
+  {
+    id: 15,
+    name: "Meta",
+    logo: pic2,
+  },
+  {
+    id: 16,
+    name: "Nike",
+    logo: pic3,
+  },
+  {
+    id: 11,
+    name: "Apple",
+    logo: pic3,
+  },
+  {
+    id: 12,
+    name: "Netflix",
+    logo: pic4,
+  },
+  {
+    id: 13,
+    name: "Adobe",
+    logo: pic5,
+  },
+  {
+    id: 14,
+    name: "Spotify",
+    logo: pic6,
+  },
+  {
+    id: 15,
+    name: "Meta",
+    logo: pic2,
+  },
+  {
+    id: 16,
+    name: "Nike",
+    logo: pic3,
   },
 ];
 

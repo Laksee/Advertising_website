@@ -3,7 +3,8 @@ import useScrollReveal from "../hooks/useScrollReveal";
 import RegistrationMark from "./RegistrationMark";
 import AnimatedText from "./AnimatedText";
 import useParallax from "../hooks/useParallax";
-
+import MobileWorkGallery from "./MobileWorkGallery";
+import useIsMobile from "../hooks/useIsMobile";
 
 function WorkCard({ item, index, onOpen }) {
   const [ref, isVisible] = useScrollReveal();
@@ -175,6 +176,7 @@ function GalleryModal({ project, onClose }) {
 export default function WorkGallery({ items }) {
   const [selectedProject, setSelectedProject] = useState(null);
   const [titleRef, titleVisible] = useScrollReveal();
+  const isMobile = useIsMobile();
 
   return (
     <section className="section" id="work">
@@ -185,27 +187,40 @@ export default function WorkGallery({ items }) {
 
         <div className="work-gallery-wrap">
 
-          <div className="gallery-title">
+          {isMobile ? (
 
-            <div
-              ref={titleRef}
-              className={`gallery-title ${titleVisible ? "show" : ""}`}
-            >
-              OUR WORK
-            </div>
+            <MobileWorkGallery
+              items={items}
+              onOpen={setSelectedProject}
+            />
 
-          </div>
+          ) : (
 
-          <div className="floating-gallery">
-            {items.map((item, index) => (
-              <WorkCard
-                key={item.project}
-                item={item}
-                index={index}
-                onOpen={setSelectedProject}
-              />
-            ))}
-          </div>
+            <>
+              <div className="gallery-title">
+
+                <div
+                  ref={titleRef}
+                  className={`gallery-title ${titleVisible ? "show" : ""}`}
+                >
+                  OUR WORK
+                </div>
+
+              </div>
+
+              <div className="floating-gallery">
+                {items.map((item, index) => (
+                  <WorkCard
+                    key={item.project}
+                    item={item}
+                    index={index}
+                    onOpen={setSelectedProject}
+                  />
+                ))}
+              </div>
+            </>
+
+          )}
 
         </div>
 
