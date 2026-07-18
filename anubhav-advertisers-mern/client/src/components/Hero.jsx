@@ -81,7 +81,7 @@ export default function Hero() {
         <div className="hoarding-frame">
           <span className="hoarding-frame__tag">D 49,Sector 10, Noida</span>
 
-          <p className="eyebrow">OUT-OF-HOME ADVERTISING AGENCY</p>
+          <p className="eyebrow">Bringing Your Brand to Life with Premium Printing in India</p>
 
           <h1 className="hero__headline">
             <AnimatedText as="span" className="hero__headline-line" text="YOU CAN'T SCROLL" splitBy="char" stagger={0.018} />
@@ -96,8 +96,7 @@ export default function Hero() {
           </h1>
 
           <p className="hero__sub">
-            Anubhav Advertisers plans, prints, and installs hoardings, banners, and wall media that put your
-            brand where people actually are — not where they can skip it.
+            With the rapidly changing world, first impressions are a priority. Anubhav Advertiser steps in as a game-changer. As a premium printing and branding agency, we offer a wide variety of services that ensure your satisfaction with our craft and quality. From web design, marketing, and branding to printing and event management.
           </p>
 
           <div className="hero__actions">

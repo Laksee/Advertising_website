@@ -18,6 +18,7 @@
   --magenta: #e5127e;
   --yellow: #ffcf00;
   --orange: #FFA500;
+  --red: #C72100;
 
   /* type */
   --font-display: "Bebas Neue", "Arial Narrow", sans-serif;
@@ -680,7 +681,7 @@ h2.section-title {
 }
 
 .marquee__track span.sep {
-  color: var(--magenta);
+  color: var(--red);
   font-size: clamp(1.2rem, 2.4vw, 1.7rem);
 }
 
@@ -1148,11 +1149,6 @@ h2.section-title {
     transform .35s ease,
     box-shadow .35s ease;
 
-  box-shadow:
-    0 12px 30px rgba(0, 0, 0, .08),
-    0 35px 80px rgba(0, 0, 0, .18),
-    0 70px 140px rgba(0, 0, 0, .12);
-
   margin-bottom: 3rem;
 
   break-inside: avoid;
@@ -1503,7 +1499,7 @@ h2.section-title {
   width: 100%;
   height: 100%;
 
-  object-fit: cover;
+  object-fit: fill;
 
   filter: saturate(.95);
 
@@ -1624,8 +1620,8 @@ h2.section-title {
   z-index: 20;
 
   box-shadow:
-    0 40px 90px rgba(0, 0, 0, .18),
-    0 80px 140px rgba(0, 0, 0, .12);
+    0 0px 0px rgba(0, 0, 0, .18),
+    0 0px 0px rgba(0, 0, 0, .12);
 }
 
 .campaign-card:hover .campaign-card__content {
@@ -1691,8 +1687,8 @@ h2.section-title {
   transform:
     translateY(-18px) rotate(0deg) scale(1.03);
 
-  box-shadow:
-    0 60px 110px rgba(0, 0, 0, .28);
+  /* box-shadow:
+    0 60px 110px rgba(0, 0, 0, .28); */
 }
 
 .print-card:hover .print-card__overlay {

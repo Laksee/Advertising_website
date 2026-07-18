@@ -3,12 +3,24 @@
 // backend or MongoDB isn't running yet. Swapped out silently once the real
 // API responds.
 
-import pic1 from "../photos/pic1.png"
-import pic2 from "../photos/pic2.png"
-import pic3 from "../photos/pic3.png"
-import pic4 from "../photos/pic4.png"
-import pic5 from "../photos/pic5.png"
-import pic6 from "../photos/pic6.png"
+import pic1 from "../photos/WorkPhotos/pic1.png"
+import pic2 from "../photos/WorkPhotos/pic2.png"
+import pic3 from "../photos/WorkPhotos/pic3.png"
+import pic4 from "../photos/WorkPhotos/pic4.png"
+import pic5 from "../photos/WorkPhotos/pic5.png"
+import pic6 from "../photos/WorkPhotos/pic6.png"
+import pic7 from "../photos/WorkPhotos/pic7.png"
+import pic8 from "../photos/WorkPhotos/pic8.png"
+
+import client1 from "../photos/ClientsPhotos/client1.jpeg"
+import client2 from "../photos/ClientsPhotos/client2.jpeg"
+import client3 from "../photos/ClientsPhotos/client3.jpg"
+import client4 from "../photos/ClientsPhotos/client4.png"
+import client5 from "../photos/ClientsPhotos/client5.jpeg"
+import client6 from "../photos/ClientsPhotos/client6.jpeg"
+import client7 from "../photos/ClientsPhotos/client7.png"
+import client8 from "../photos/ClientsPhotos/client8.png"
+import client9 from "../photos/ClientsPhotos/client9.png"
 
 export const services = [
   {
@@ -130,7 +142,7 @@ export const workGallery = [
     spec: "60 Buses · Bus-Back Panel · 6 Months",
     swatch: "cyan",
 
-    photos: [pic6]
+    photos: [pic7]
   },
   {
     client: "Pulsewear Fitness",
@@ -139,7 +151,7 @@ export const workGallery = [
     spec: "60 Buses · Bus-Back Panel · 6 Months",
     swatch: "cyan",
 
-    photos: [pic6]
+    photos: [pic8]
   },
 ];
 
@@ -147,113 +159,113 @@ export const clients = [
   {
     id: 1,
     name: "Google",
-    logo: pic1,
+    logo: client1,
   },
   {
     id: 2,
     name: "Amazon",
-    logo: pic2,
+    logo: client2,
   },
   {
     id: 3,
     name: "Apple",
-    logo: pic3,
+    logo: client3,
   },
   {
     id: 4,
     name: "Netflix",
-    logo: pic4,
+    logo: client4,
   },
   {
     id: 5,
     name: "Adobe",
-    logo: pic5,
+    logo: client5,
   },
   {
     id: 6,
     name: "Spotify",
-    logo: pic6,
+    logo: client6,
   },
   {
     id: 7,
     name: "Meta",
-    logo: pic2,
+    logo: client7,
   },
   {
     id: 8,
     name: "Nike",
-    logo: pic3,
+    logo: client8,
   },
   {
     id: 9,
     name: "Google",
-    logo: pic1,
+    logo: client9,
   },
   {
     id: 10,
     name: "Amazon",
-    logo: pic2,
+    logo: client1,
   },
   {
     id: 11,
     name: "Apple",
-    logo: pic3,
+    logo: client2,
   },
   {
     id: 12,
     name: "Netflix",
-    logo: pic4,
+    logo: client3,
   },
   {
     id: 13,
     name: "Adobe",
-    logo: pic5,
+    logo: client4,
   },
   {
     id: 14,
     name: "Spotify",
-    logo: pic6,
+    logo: client5,
   },
   {
     id: 15,
     name: "Meta",
-    logo: pic2,
+    logo: client6,
   },
   {
     id: 16,
     name: "Nike",
-    logo: pic3,
+    logo: client7,
   },
   {
     id: 11,
     name: "Apple",
-    logo: pic3,
+    logo: client8,
   },
   {
     id: 12,
     name: "Netflix",
-    logo: pic4,
+    logo: client9,
   },
-  {
-    id: 13,
-    name: "Adobe",
-    logo: pic5,
-  },
-  {
-    id: 14,
-    name: "Spotify",
-    logo: pic6,
-  },
-  {
-    id: 15,
-    name: "Meta",
-    logo: pic2,
-  },
-  {
-    id: 16,
-    name: "Nike",
-    logo: pic3,
-  },
+  // {
+  //   id: 13,
+  //   name: "Adobe",
+  //   logo: pic5,
+  // },
+  // {
+  //   id: 14,
+  //   name: "Spotify",
+  //   logo: pic6,
+  // },
+  // {
+  //   id: 15,
+  //   name: "Meta",
+  //   logo: pic2,
+  // },
+  // {
+  //   id: 16,
+  //   name: "Nike",
+  //   logo: pic3,
+  // },
 ];
 
 export const testimonials = [

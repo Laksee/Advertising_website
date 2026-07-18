@@ -12,7 +12,7 @@ export default function CTABanner() {
         </h2>
         <p>Tell us where you want to be seen and we'll scout sites, handle permissions, and get your creative live within days.</p>
         <a className="btn btn--paper" href="#contact">
-          Book A Site →
+          CONTACT US →
         </a>
       </div>
     </section>

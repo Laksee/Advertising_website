@@ -2,6 +2,8 @@ import "./ClientShowcase.css";
 import { clients } from "../../data/fallbackData.js";
 import LogoCard from "./LogoCard";
 import { useEffect, useRef } from "react";
+import AnimatedText from "../AnimatedText.jsx";
+
 
 export default function ClientShowcase() {
     const logoRefs = useRef([]);
@@ -99,9 +101,7 @@ logo.style.transform =
                     Trusted by
                 </p>
 
-                <h2 className="clients-title">
-                    OUR CLIENTS
-                </h2>
+                <AnimatedText as="span" className="clients-title" text="OUR CLIENTS" splitBy="char" stagger={0.018} />
 
             </div>
 
